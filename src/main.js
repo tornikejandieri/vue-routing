@@ -12,6 +12,7 @@ const router = createRouter({
     { path: '/teams', component: TeamsList }, //create endpoint for links
     { path: '/users', component: UsersList },
   ],
+  linkActiveClass: 'active',
 });
 
 const app = createApp(App);
