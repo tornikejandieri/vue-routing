@@ -32,6 +32,13 @@ const router = createRouter({
   },
 });
 
+//NAVIGATION GUARD - call a built in method before navigation happens
+router.beforeEach(function (to, from, next) {
+  console.log(to, from);
+  //if you put false in next() navigation gets cancelled
+  next();
+});
+
 const app = createApp(App);
 //make app use our router
 app.use(router);
